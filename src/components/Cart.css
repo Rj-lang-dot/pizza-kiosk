@@ -65,3 +65,58 @@
 }
 .place-order-btn:hover  { background: #8fb86a; }
 .place-order-btn:active { transform: scale(0.97); }
+
+.promo-box {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.promo-input {
+  flex: 1;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  border: 1.5px solid #a8c97f44;
+  background: #254d38;
+  color: white;
+  font-size: 0.72rem;
+  outline: none;
+  letter-spacing: 1px;
+  width: 110px;
+  min-width: 0;
+}
+
+.promo-input::placeholder { color: #5a7a5a; }
+.promo-input.error   { border-color: #e74c3c; }
+.promo-input.success { border-color: #a8c97f; }
+.promo-input:disabled { opacity: 0.6; }
+
+.promo-btn {
+  padding: 0.3rem 0.7rem;
+  background: #a8c97f;
+  color: #1b3a2d;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.promo-btn:hover    { background: #8fb86a; }
+.promo-btn:disabled { opacity: 0.6; cursor: default; }
+
+.promo-msg {
+  font-size: 0.68rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.error-msg   { color: #e74c3c; }
+.success-msg { color: #a8c97f; }
+
+.discount-line {
+  font-size: 0.72rem;
+  color: #a8c97f;
+  font-weight: 600;
+}

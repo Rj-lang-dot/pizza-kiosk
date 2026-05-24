@@ -10,6 +10,7 @@ function App() {
   const [selectedPizza, setSelectedPizza] = useState(null); // for customizer
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [orderNumber, setOrderNumber] = useState(null);
+  const [orderTotal, setOrderTotal] = useState(0);
 
   const handleAddToCart = (cartItem) => {
     setCart([...cart, { ...cartItem, cartId: Date.now() }]);
@@ -20,11 +21,12 @@ function App() {
     setCart(cart.filter((item) => item.cartId !== cartId));
   };
 
-  const handlePlaceOrder = () => {
-    setOrderNumber(Math.floor(Math.random() * 9000) + 1000);
-    setOrderPlaced(true);
-    setCart([]);
-  };
+  const handlePlaceOrder = (total) => {
+  setOrderNumber(Math.floor(Math.random() * 9000) + 1000);
+  setOrderTotal(total);
+  setOrderPlaced(true);
+  setCart([]);
+};
 
   const handleNewOrder = () => {
     setOrderPlaced(false);
@@ -32,7 +34,7 @@ function App() {
   };
 
   if (orderPlaced) {
-    return <Confirmation orderNumber={orderNumber} onNewOrder={handleNewOrder} />;
+    return <Confirmation orderNumber={orderNumber} orderTotal={orderTotal} onNewOrder={handleNewOrder}  />;
   }
 
   return (
