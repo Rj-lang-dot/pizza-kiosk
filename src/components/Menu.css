@@ -1,0 +1,25 @@
+.menu {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.menu h2 {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #3a6b4a;
+  margin-bottom: 0.6rem;
+  flex-shrink: 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.6rem;
+  overflow-y: auto;
+  padding-right: 4px;
+}
